@@ -22,7 +22,24 @@ IT and Data Entry Staff – who deal with repetitive, structured tasks daily.
 General Desktop Users – anyone looking to simplify and speed up their daily digital routines.
 
 # How to Run the Project
+**1. Download the project:** Clone or download the Git repository to your computer.
 
+**2 Install dependencies**
+
+- Open the project folder in your code editor (VS Code recommended).
+
+- Open the integrated terminal.
+
+- Run the following command to install all required dependencies:
+
+- **npm install**
+
+
+**Start the application:** Once installation is complete, start the app by running:
+
+**npm start**
+
+   
 # Team Members
 Suerine Otieno 
 github: suerineogaja@gmail.com
