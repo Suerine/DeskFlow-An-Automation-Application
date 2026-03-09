@@ -1,75 +1,147 @@
-# Automation-Application 
-# Name: DeskFlow
+Deskflow readme · MD
+Copy
 
-# TL;DR
-DeskFlow is a desktop productivity and automation application built with **Python and JavaScript** to help users manage tasks and eliminate repetitive workflows. It includes a **task timer with active/idle time detection, a Quick Delete feature for instant file cleanup, and an AI email assistant that can summarize threads, prioritize messages, and help draft replies.** The project strengthened my skills in **desktop app development, automation design, system activity monitoring, and integrating AI-powered productivity tools.**
-# Project Description
-In today's fast-paced digital environment, desktop users—ranging from students and professionals to small business owners—face increasing pressure to manage repetitive and time-consuming tasks such as file organization, data entry, and scheduling. These routine activities, while essential, often consume valuable time and reduce productivity, leaving users overwhelmed and unable to focus on higher-value work.
+# DeskFlow
 
-Despite the availability of task-specific tools, there is a lack of a unified, intelligent automation solution that integrates multiple functions into one accessible platform. Users are forced to juggle multiple applications or perform repetitive actions manually, leading to inefficiencies, increased error rates, and burnout.
+> **TL;DR:** DeskFlow is a desktop productivity and automation application built with **Python and JavaScript** to help users manage tasks and eliminate repetitive workflows. It includes a **task timer with active/idle time detection, a Quick Delete feature for instant file cleanup, and an AI email assistant powered by OpenAI GPT that can summarize threads, prioritize messages, and help draft replies.** The project strengthened my skills in **desktop app development, automation design, system activity monitoring, and integrating AI-powered productivity tools.**
 
-This project aims to solve this problem by developing an all-in-one desktop automation application that streamlines key tasks—including file management, data entry, and scheduling—while providing additional time-saving tools. By automating these processes, the application will help users regain control over their time, improve efficiency, and boost overall productivity.
+---
 
-# Target Users
-Office Professionals – who regularly manage files, enter data, and schedule meetings or deadlines.
+## 💡 Inspiration
 
-Small Business Owners & Entrepreneurs – who need to streamline operations without hiring additional staff.
+In today's fast-paced digital environment, users face increasing pressure to manage repetitive and time-consuming tasks — file organization, scheduling, communication — often across multiple disconnected tools. DeskFlow was built to consolidate these into a single, intelligent desktop application that gives users back control over their time.
 
-Students & Academics – who handle large volumes of digital documents, assignments, and study schedules.
+---
 
-Freelancers & Remote Workers – who benefit from automating admin tasks to stay focused on billable work.
+## ✨ Features
 
-IT and Data Entry Staff – who deal with repetitive, structured tasks daily.
+### ✅ Implemented
 
-General Desktop Users – anyone looking to simplify and speed up their daily digital routines.
+- **Task Timer** — tracks active and idle time to help users monitor productivity sessions
+- **Quick Delete** — instant file cleanup tool for removing files without navigating file explorers
+- **AI Email Assistant** — powered by OpenAI GPT; summarizes email threads, prioritizes messages by urgency, and assists with drafting replies
 
-# How to Run the Project
-**1. Download the project:** Clone or download the Git repository to your computer.
+### 🔧 In Progress
 
-**2 Install dependencies**
+- **File Organizer** — automated sorting of files into folders by type, date, or custom rules
 
-- Open the project folder in your code editor (VS Code recommended).
+---
 
-- Open the integrated terminal.
+## 🏗️ Architecture
 
-- Run the following command to install all required dependencies:
+DeskFlow follows a **desktop application architecture** with a Python backend handling system-level operations and automation logic, and a JavaScript frontend managing the UI layer.
 
-- **npm install**
+```
+┌─────────────────────────────────────────┐
+│           JavaScript Frontend           │
+│         (UI, Dashboard, Controls)       │
+└─────────────────┬───────────────────────┘
+                  │  IPC / API calls
+                  ▼
+┌─────────────────────────────────────────┐
+│           Python Backend                │
+│  ┌─────────────┐   ┌─────────────────┐  │
+│  │ Task Timer  │   │  Quick Delete   │  │
+│  │ (activity   │   │  (file system   │  │
+│  │  monitoring)│   │   operations)   │  │
+│  └─────────────┘   └─────────────────┘  │
+│  ┌──────────────────────────────────┐   │
+│  │       AI Email Assistant         │   │
+│  │  (OpenAI GPT API integration)    │   │
+│  └──────────────────────────────────┘   │
+└─────────────────────────────────────────┘
+                  │
+                  ▼
+        ┌──────────────────┐
+        │   OpenAI API     │
+        │  (GPT — email    │
+        │   summarization, │
+        │   prioritization,│
+        │   reply drafting)│
+        └──────────────────┘
+```
 
+**Key design decisions:**
+- Python handles all system-level operations (file I/O, activity monitoring, process management) where it has the strongest native support
+- The AI email assistant makes calls to the OpenAI API, passing email content and returning structured summaries and draft responses
+- The frontend communicates with the Python layer to trigger automation actions and display results in real time
 
-**Start the application:** Once installation is complete, start the app by running:
+---
 
-**npm start**
+## 🤖 AI Email Assistant
 
-   
-# Team Members
-Suerine Otieno 
-github: suerineogaja@gmail.com
+The email assistant is integrated with the **OpenAI GPT API** and supports three core functions:
 
-# Project Timeline
-Planning & Design
+- **Summarize** — condenses long email threads into a short, readable summary
+- **Prioritize** — analyses message content and flags high-urgency emails
+- **Draft replies** — generates context-aware reply suggestions based on the thread
 
-- Define core features and MVP scope
+All prompts are structured to return clean, actionable output directly usable within the app.
 
-- Create wireframes, UI mockups, and system architecture
+---
 
-Core Development (Phase 1)
+## 🖥️ Tech Stack
 
-- Build automation engine
+| Layer | Technology |
+|---|---|
+| Frontend | JavaScript |
+| Backend | Python |
+| AI Integration | OpenAI GPT API |
+| Runtime | Node.js |
 
-- Develop base UI for task automation and file management
+---
 
-Development (Phase 2) & Testing
+## 🚀 Getting Started
 
-- Add scheduling, data entry features
+**1. Clone the repository**
+```bash
+git clone https://github.com/yourusername/deskflow.git
+cd deskflow
+```
 
-- Conduct internal and external user testing
+**2. Install dependencies**
+```bash
+npm install
+```
 
-Finalization & Launch
+**3. Set up environment variables**
 
-- Refine UI, implement subscriptions
+Create a `.env` file in the root directory:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
 
-- Launch MVP, start marketing and onboarding
+**4. Start the application**
+```bash
+npm start
+```
 
-# Link to Project Board
-https://github.com/users/Suerine/projects/2
+---
+
+## 👥 Target Users
+
+- **Office Professionals** — managing files, scheduling, and high email volumes
+- **Freelancers & Remote Workers** — automating admin tasks to stay focused on billable work
+- **Students & Academics** — handling large volumes of documents and deadlines
+- **IT & Data Entry Staff** — dealing with repetitive, structured tasks daily
+
+---
+
+## 🛠 Future Improvements
+
+- [ ] Complete File Organizer — automated sorting by type, date, or custom rules
+- [ ] Containerise with Docker for easier cross-platform distribution
+- [ ] Calendar and scheduling integration
+- [ ] Subscription/licensing model for premium features
+- [ ] Expanded AI features — smart scheduling suggestions, meeting prep summaries
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Submit a pull request
