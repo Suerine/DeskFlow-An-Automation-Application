@@ -1,6 +1,9 @@
 # Automation-Application 
 # Name: DeskFlow
 
+# TL;DR
+DeskFlow is a desktop productivity and automation application built with **Python and JavaScript** to help users manage tasks and eliminate repetitive workflows. It includes a **task timer with active/idle time detection, a Quick Delete feature for instant file cleanup, and an AI email assistant that can summarize threads, prioritize messages, and help draft replies.** The project strengthened my skills in **desktop app development, automation design, system activity monitoring, and integrating AI-powered productivity tools.
+**
 # Project Description
 In today's fast-paced digital environment, desktop users—ranging from students and professionals to small business owners—face increasing pressure to manage repetitive and time-consuming tasks such as file organization, data entry, and scheduling. These routine activities, while essential, often consume valuable time and reduce productivity, leaving users overwhelmed and unable to focus on higher-value work.
 
