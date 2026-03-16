@@ -1,5 +1,3 @@
-Deskflow readme · MD
-Copy
 
 # DeskFlow
 
@@ -18,8 +16,18 @@ In today's fast-paced digital environment, users face increasing pressure to man
 ### ✅ Implemented
 
 - **Task Timer** — tracks active and idle time to help users monitor productivity sessions
+[![DeskFlow TimeTracker Demo](https://github.com/user-attachments/assets/e70d6d4d-edce-48e6-b0b4-a2c773dd90d0)
+
 - **Quick Delete** — instant file cleanup tool for removing files without navigating file explorers
+![DeskFlow QuickDelete Demo](https://github.com/user-attachments/assets/6bc0cd6e-18a0-4d96-b00b-0ecdef194f73)
+
+- **Quick Search** — instant search for opening multiple search pages when looking for a product
+![DeskFlow QuickSearch Demo](https://github.com/user-attachments/assets/a8c093a7-baba-4b2f-8a30-0d5e6a802f1c)
+
+
 - **AI Email Assistant** — powered by OpenAI GPT; summarizes email threads, prioritizes messages by urgency, and assists with drafting replies
+![DeskFlow MailAssistant Demo](https://github.com/user-attachments/assets/ace23658-0335-4d70-9005-16cb8c31a80c)
+
 
 ### 🔧 In Progress
 
